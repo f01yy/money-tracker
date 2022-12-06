@@ -1,11 +1,12 @@
 <template>
-  <div class="expenses__list">
+  <div v-if="expenses.length" class="expenses__list">
     <expenses-item
       v-for="expense in expenses"
       :expense="expense"
       :key="expense.id"
     />
   </div>
+  <p class="expenses__empty" v-else>Список пуст</p>
 </template>
 
 <script>
@@ -27,5 +28,9 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.expenses__empty {
+  font-size: 20px;
+  text-align: center;
 }
 </style>
