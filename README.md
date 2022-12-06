@@ -1,4 +1,5 @@
 # money-tracker
+Vue 3 (Otions API) + Vuex + Vue Router
 
 ## Project setup
 ```
