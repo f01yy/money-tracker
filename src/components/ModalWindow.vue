@@ -1,6 +1,7 @@
 <template>
-  <div v-if="isShowing" @click="close" class="modal">
-    <div @click.stop class="modal__body">
+  <div v-if="isShowing" class="modal">
+    <div class="modal__body">
+      <div @click="close" class="close modal__close">&#215;</div>
       <slot></slot>
     </div>
   </div>
@@ -40,8 +41,15 @@ export default {
   align-items: center;
 }
 .modal__body {
+  padding-top: 20px;
   background-color: #eee;
   max-width: 770px;
   width: 90%;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
 </style>

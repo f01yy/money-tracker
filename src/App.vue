@@ -95,6 +95,14 @@ body {
   font-size: 30px;
   text-align: center;
 }
+.close {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 43, 43);
+  cursor: pointer;
+}
 .btn {
   padding: 10px;
   transition: all 0.2s;

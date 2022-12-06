@@ -4,7 +4,9 @@
       <div class="expenses__category">{{ expense.category }}</div>
       <div class="expenses__title">{{ expense.title }}</div>
     </div>
-    <div @click="handleClick(expense.id)" class="expenses__close">&#215;</div>
+    <div @click="handleClick(expense.id)" class="close expenses__close">
+      &#215;
+    </div>
     <div class="expenses__price">{{ getNormalizedPrice(expense.value) }}</div>
   </div>
 </template>
@@ -58,11 +60,5 @@ export default {
   position: absolute;
   top: 0;
   right: 10px;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 43, 43);
-  cursor: pointer;
 }
 </style>

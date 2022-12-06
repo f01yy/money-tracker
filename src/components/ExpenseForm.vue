@@ -78,7 +78,7 @@ export default {
 .form__select {
   padding: 10px;
   font-size: 16px;
-  border: none;
+  border: 1px solid rgb(161, 161, 161);
   outline: none;
 }
 </style>
