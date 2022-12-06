@@ -1,32 +1,39 @@
 <template>
-  <form class="expenses__form form" @submit.prevent>
-    <input
-      v-model="title"
-      class="form__input"
-      type="text"
-      placeholder="Введите название"
-    />
-    <input
-      v-model="value"
-      class="form__input"
-      type="number"
-      placeholder="Введите сумму"
-    />
-    <select v-model="selectedCategory" class="form__select">
-      <option value="" disabled>Выберите категорию:</option>
-      <option v-for="category in categories" :key="category" :value="category">
-        {{ category }}
-      </option>
-    </select>
-    <p>или создайте свою:</p>
-    <input
-      v-model="newCategory"
-      type="text"
-      class="form__input"
-      placeholder="Новая категория"
-    />
-    <button @click="handleClick" class="form__btn btn">Добавить</button>
-  </form>
+  <div>
+    <h3>Новые траты</h3>
+    <form class="expenses__form form" @submit.prevent>
+      <input
+        v-model="title"
+        class="form__input"
+        type="text"
+        placeholder="Введите название"
+      />
+      <input
+        v-model="value"
+        class="form__input"
+        type="number"
+        placeholder="Введите сумму"
+      />
+      <select v-model="selectedCategory" class="form__select">
+        <option value="" disabled>Выберите категорию:</option>
+        <option
+          v-for="category in categories"
+          :key="category"
+          :value="category"
+        >
+          {{ category }}
+        </option>
+      </select>
+      <p>или создайте свою:</p>
+      <input
+        v-model="newCategory"
+        type="text"
+        class="form__input"
+        placeholder="Новая категория"
+      />
+      <button @click="handleClick" class="form__btn btn">Добавить</button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -68,6 +75,10 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  margin-left: 20px;
+  font-size: 20px;
+}
 .expenses__form {
   padding: 20px;
   display: flex;
